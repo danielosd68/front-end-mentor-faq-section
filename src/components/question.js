@@ -5,12 +5,16 @@ const Question = (props) => {
     const [isClicked, setAsClicked] = useState(false);
 
     useEffect(() => {
+        const question = document.querySelector(`.single-question:nth-child(${props.id})`);
+        const answer = document.querySelector(`.single-question:nth-child(${props.id}) > .answer`);
         if (isClicked === true) {
-
+            question.classList.add('active');
+            answer.classList.add('show');
         }
 
         else {
-
+            question.classList.remove('active');
+            answer.classList.remove('show');
         }
     }, [isClicked])
     return (

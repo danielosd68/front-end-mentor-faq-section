@@ -93,3 +93,8 @@ body #root .faq-container .section.questions .single-question .answer.show {
 body #root .faq-container .section.questions .single-question h3:hover {
   color: #f47c57;
 }
+
+body #root .faq-container .section.questions .single-question.active {
+  color: #1d1e35;
+  font-size: 104%;
+}
