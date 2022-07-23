@@ -1,0 +1,114 @@
+$veryDarkBlue: hsl(238, 29%, 16%);
+$softRed: hsl(14, 88%, 65%);
+
+//Gradient colors::after
+$softViolet: hsl(273, 75%, 66%);
+$softBlue: #6565e7;
+
+$veryDarkGraishBlue: hsl(237, 12%, 33%);
+$darkGrayishBlue: hsl(240, 6%, 50%);
+$lightgrayishBlue: hsl(240, 5%, 91%);
+
+$defaultFontSize: 12px;
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    font-size: $defaultFontSize;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: rgba(171, 104, 233, 1);
+    background-image: linear-gradient(180deg, rgba(171, 104, 233, 1) 0%, rgba(101, 101, 231, 1) 100%);
+
+
+    #root {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        .faq-container {
+            width: 85%;
+            min-height: 500px;
+            background-color: white;
+            border-radius: 30px;
+            background-image: url('../images/bg-pattern-mobile.svg');
+            background-position: top center;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+            margin-bottom: 100px;
+
+
+            .main-illustration.mobile {
+                position: relative;
+                top: -120px;
+                width: 250px;
+                display: block;
+                margin: 0 auto;
+            }
+
+            .section.header {
+                width: 100%;
+                font-size: 1.5rem;
+                font-weight: 400;
+                border-bottom: 1px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                h1 {
+                    margin: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .section.questions {
+                min-height: 300px;
+                width: 100%;
+
+                .single-question {
+                    min-height: 50px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    font-size: 1rem;
+                    user-select: none;
+                    cursor: pointer;
+                    color: $veryDarkGraishBlue;
+                    transition: color 0.2s ease-in-out;
+                    border-bottom: 1px solid $lightgrayishBlue;
+
+                    .answer {
+                        width: 100%;
+                        margin-top: 5px;
+                        margin-bottom: 15px;
+                        display: none;
+                        color: $darkGrayishBlue;
+                        font-size: 110%;
+                    }
+
+                    .answer.show {
+                        display: block;
+                    }
+                }
+
+                .single-question h3:hover {
+                    color: $softRed;
+                }
+            }
+        }
+    }
+
+
+}
