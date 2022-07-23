@@ -31,6 +31,7 @@ body #root .faq-container {
   background-repeat: no-repeat;
   margin-top: 100px;
   margin-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 body #root .faq-container .main-illustration.mobile {
@@ -72,7 +73,7 @@ body #root .faq-container .section.questions .single-question {
   font-size: 1rem;
   user-select: none;
   cursor: pointer;
-  color: #4a4b5e;
+  color: #787887;
   transition: color 0.2s ease-in-out;
   border-bottom: 1px solid #e7e7e9;
 }
@@ -88,6 +89,10 @@ body #root .faq-container .section.questions .single-question .answer {
 
 body #root .faq-container .section.questions .single-question .answer.show {
   display: block;
+}
+
+body #root .faq-container .section.questions .single-question img.rotated {
+  transform: rotate(180deg);
 }
 
 body #root .faq-container .section.questions .single-question h3:hover {

@@ -45,6 +45,7 @@ body {
             background-repeat: no-repeat;
             margin-top: 100px;
             margin-bottom: 100px;
+            padding-bottom: 30px;
 
 
             .main-illustration.mobile {
@@ -85,9 +86,10 @@ body {
                     font-size: 1rem;
                     user-select: none;
                     cursor: pointer;
-                    color: $veryDarkGraishBlue;
+                    color: $darkGrayishBlue;
                     transition: color 0.2s ease-in-out;
                     border-bottom: 1px solid $lightgrayishBlue;
+
 
                     .answer {
                         width: 100%;
@@ -100,6 +102,10 @@ body {
 
                     .answer.show {
                         display: block;
+                    }
+
+                    img.rotated {
+                        transform: rotate(180deg);
                     }
                 }
 
