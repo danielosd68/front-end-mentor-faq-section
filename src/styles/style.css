@@ -34,7 +34,28 @@ body #root .faq-container {
   padding-bottom: 30px;
 }
 
-body #root .faq-container .main-illustration.mobile {
+@media (min-width: 1200px) {
+  body #root .faq-container {
+    background-image: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1000px;
+  }
+}
+
+@media (min-width: 1200px) {
+  body #root .faq-container .photo {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    width: 50%;
+    background-size: 120% 100%;
+    background-position-x: -190px;
+    background-repeat: no-repeat;
+    background-position-y: -40px;
+  }
+}
+
+body #root .faq-container .photo .main-illustration.mobile {
   position: relative;
   top: -120px;
   width: 250px;
@@ -42,7 +63,29 @@ body #root .faq-container .main-illustration.mobile {
   margin: 0 auto;
 }
 
-body #root .faq-container .section.header {
+@media (min-width: 1200px) {
+  body #root .faq-container .photo .main-illustration.mobile {
+    width: 450px;
+    z-index: 1;
+    top: 70px;
+    left: -100px;
+  }
+}
+
+body #root .faq-container .photo .main-illustration.desktop {
+  position: relative;
+  z-index: 2;
+  top: -100px;
+  left: -100px;
+}
+
+@media (min-width: 1200px) {
+  body #root .faq-container .content {
+    width: 50%;
+  }
+}
+
+body #root .faq-container .content .section.header {
   width: 100%;
   font-size: 1.5rem;
   font-weight: 400;
@@ -52,17 +95,24 @@ body #root .faq-container .section.header {
   align-items: flex-end;
 }
 
-body #root .faq-container .section.header h1 {
+@media (min-width: 1200px) {
+  body #root .faq-container .content .section.header {
+    justify-content: left;
+    margin-left: 20px;
+  }
+}
+
+body #root .faq-container .content .section.header h1 {
   margin: 0;
   margin-bottom: 10px;
 }
 
-body #root .faq-container .section.questions {
+body #root .faq-container .content .section.questions {
   min-height: 300px;
   width: 100%;
 }
 
-body #root .faq-container .section.questions .single-question {
+body #root .faq-container .content .section.questions .single-question {
   min-height: 50px;
   display: flex;
   justify-content: space-between;
@@ -78,7 +128,7 @@ body #root .faq-container .section.questions .single-question {
   border-bottom: 1px solid #e7e7e9;
 }
 
-body #root .faq-container .section.questions .single-question .answer {
+body #root .faq-container .content .section.questions .single-question .answer {
   width: 100%;
   margin-top: 5px;
   margin-bottom: 15px;
@@ -87,19 +137,19 @@ body #root .faq-container .section.questions .single-question .answer {
   font-size: 110%;
 }
 
-body #root .faq-container .section.questions .single-question .answer.show {
+body #root .faq-container .content .section.questions .single-question .answer.show {
   display: block;
 }
 
-body #root .faq-container .section.questions .single-question img.rotated {
+body #root .faq-container .content .section.questions .single-question img.rotated {
   transform: rotate(180deg);
 }
 
-body #root .faq-container .section.questions .single-question h3:hover {
+body #root .faq-container .content .section.questions .single-question h3:hover {
   color: #f47c57;
 }
 
-body #root .faq-container .section.questions .single-question.active {
+body #root .faq-container .content .section.questions .single-question.active {
   color: #1d1e35;
   font-size: 104%;
 }
